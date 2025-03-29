@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luom Click Play</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .play-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px #1e7e34;
+            font-weight: bold;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px #155724;
+        }
+
+        .play-btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px #155724;
+        }
+
+        .click-btn {
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.1s, box-shadow 0.1s;
+            box-shadow: 0 4px #0c5a17;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        .click-btn:active {
+            transform: scale(0.9);
+            box-shadow: 0 2px #0c5a17;
+        }
+
+        @media (max-width: 600px) {
+            .play-btn {
+                font-size: 20px;
+                padding: 12px 25px;
+            }
+            .click-btn {
+                width: 70px;
+                height: 70px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="play-btn" onclick="playGame()">Click Here to Play Luom</button>
+    <button class="click-btn" onclick="playClickSound()">Click</button>
+    <audio id="click-sound" src="/click.mp3"></audio>
+
+    <script>
+        function playGame() {
+            alert("Game Started!");
+        }
+
+        function playClickSound() {
+            document.getElementById("click-sound").play();
+        }
+    </script>
+</body>
+</html>
